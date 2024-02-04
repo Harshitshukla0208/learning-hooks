@@ -1,0 +1,10 @@
+/* tweetList.css */
+
+.tweet-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tweet-list li {
+    margin-bottom: 20px;
+}

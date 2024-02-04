@@ -1,19 +1,39 @@
 /* tweet.css */
 
 .tweet-wrapper {
+    background-color: #f8f8f8;
     border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0; /* Remove auto to keep spacing */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .tweet-content {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.6;
     margin-bottom: 10px;
+    color: #333;
 }
 
-.likes {
+.like-createdAt-wrapper {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+}
+
+.likes, .created-at {
     color: #888;
     font-size: 14px;
+    margin-bottom: 5px; /* Add some space between likes and date */
+}
+
+.created-at {
+    font-weight: bold;
+}
+
+/* Add some hover effect for a cool interaction */
+.tweet-wrapper:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
+    transition: background-color 0.3s, transform 0.3s;
 }

@@ -1,39 +1,68 @@
 /* tweet.css */
 
 .tweet-wrapper {
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
+    background-color: #333; /* Dark background color */
+    border: 1px solid #555; /* Dark border color */
     padding: 15px;
-    margin: 20px 0; /* Remove auto to keep spacing */
+    margin: 20px 0;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .tweet-content {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 10px;
-    color: #333;
+    color: #ddd; /* Light gray text color */
 }
 
 .like-createdAt-wrapper {
     display: flex;
-    flex-direction: column; /* Change to column layout */
+    flex-direction: column;
 }
 
 .likes, .created-at {
-    color: #888;
+    color: #aaa; /* Darker gray for likes and date */
     font-size: 14px;
-    margin-bottom: 5px; /* Add some space between likes and date */
+    margin-bottom: 5px;
 }
 
 .created-at {
     font-weight: bold;
 }
 
-/* Add some hover effect for a cool interaction */
+/* Hover effect color */
 .tweet-wrapper:hover {
-    background-color: #e0e0e0;
+    background-color: #444; /* Darker background on hover */
     transform: scale(1.02);
-    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* edit.css */
+
+.tweet-edit-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.tweet-content {
+    flex-grow: 1;
+}
+
+.edit-btn {
+    margin-left: 10px;
+}
+
+.edit-btn button {
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-btn button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }

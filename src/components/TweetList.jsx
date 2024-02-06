@@ -6,13 +6,19 @@ function formatDate(dateString) {
     return new Date(dateString).toLocaleDateString(undefined, options);
 }
 
-function TweetList({tweets}) {
+function TweetList({tweets, onEditTweet}) {
     return (
         <ul className="tweet-list">
             {
                 tweets.map((tweet) => (
                     <li key={tweet.id}>
-                        <Tweet content={tweet.content} likeCount={tweet.likeCount} createdAt={formatDate(tweet.createdAt)} />
+                        <Tweet 
+                            tweetId = {tweet.id}
+                            content={tweet.content}
+                            likeCount={tweet.likeCount}
+                            createdAt={formatDate(tweet.createdAt)}
+                            onEdit = {onEditTweet}
+                        />
                     </li>
                 ))
             }

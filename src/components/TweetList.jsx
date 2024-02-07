@@ -1,5 +1,8 @@
 import Tweet from "./Tweet";
+import {memo} from 'react';
 import './css/tweetList.css';
+
+const MemoisedTweet = memo(Tweet);
 
 function formatDate(dateString) {
     const options = { month: 'short', day: 'numeric' };
@@ -12,7 +15,7 @@ function TweetList({tweets, onEditTweet}) {
             {
                 tweets.map((tweet) => (
                     <li key={tweet.id}>
-                        <Tweet 
+                        <MemoisedTweet 
                             tweetId = {tweet.id}
                             content={tweet.content}
                             likeCount={tweet.likeCount}
